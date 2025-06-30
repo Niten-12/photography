@@ -38,7 +38,7 @@ satya-photography/
 
 ## run app
 
-EQLaGdFvYD82d6JH node server.js npm run dev:mobile -- --host
+node server.js npm run dev:mobile -- --host
 
 ## 📋 Final Summary Report: Interactive Client Feedback Section for Photography Website
 

@@ -68,15 +68,14 @@ const ContactSection = () => {
           </p>
 
           <div className="space-y-4 text-gray-300">
-            <p>📧 contact.com</p>
-            <p>📞 +1 (555) 123-4567</p>
+            <p>📧 swainsatyanarayan13@gmail.com</p>
             <p>📍 INDIA</p>
           </div>
 
           {/* 🌐 Social Media Icons */}
           <div className="flex gap-6 mt-8 flex-wrap">
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/mr._satya_7/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[32px] text-white font-bold hover:text-pink-500 cursor-pointer transition"
@@ -84,7 +83,7 @@ const ContactSection = () => {
               <FaInstagram />
             </a>
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/satyanarayan.swain1/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[32px] text-white font-bold hover:text-blue-500 cursor-pointer transition"
@@ -92,7 +91,7 @@ const ContactSection = () => {
               <FaFacebookF />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://in.linkedin.com/in/satya-narayan-swain-687442216?trk=people-guest_people_search-card"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[32px] text-white font-bold hover:text-blue-400 cursor-pointer transition"

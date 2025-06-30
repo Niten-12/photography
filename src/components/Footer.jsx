@@ -35,7 +35,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Satya Photography. All rights reserved.
             Developed with ❤️ by{" "}
             <a
-              href="https://github.com/Niten-12"
+              href="https://www.instagram.com/nitenswain?igsh=MW55NXI4cWd5MWNqdA=="
               className="text-amber-400 hover:underline"
             >
               Niten Swain
