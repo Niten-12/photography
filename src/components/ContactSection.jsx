@@ -68,7 +68,13 @@ const ContactSection = () => {
           </p>
 
           <div className="space-y-4 text-gray-300">
-            <p>📧 swainsatyanarayan13@gmail.com</p>
+            <a
+              href="mailto:swainsatyanarayan13@gmail.com"
+              class="text-blue-500 underline cursor-pointer"
+            >
+              📧 swainsatyanarayan13@gmail.com
+            </a>
+
             <p>📍 INDIA</p>
           </div>
 
