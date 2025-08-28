@@ -8,7 +8,6 @@ import Showcase from "./showcase";
 import FeedbackSection from "./FeedbackSection";
 import ContactSection from "./ContactSection";
 import Footer from "./Footer"; // ✅ Import Footer
-import IntroSection from "./Intro";
 const Index = () => {
   const [isOpen, setIsOpen] = useState(false);
   const scrollRef = useRef(null);
@@ -156,7 +155,52 @@ const Index = () => {
       </nav>
 
       {/* Intro */}
-      <IntroSection />
+      <section
+        id="intro"
+        className="min-h-screen flex items-center justify-center relative h-[100vh] overflow-hidden"
+        data-scroll-section
+      >
+        {/* Background Video */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          data-scroll
+          data-scroll-speed="-2"
+          className="absolute inset-0 w-full h-full object-cover z-0 will-change-transform"
+          style={{ transform: "translateZ(0)" }}
+        >
+          <source
+            src="/videos/Untitled video - Made with Clipchamp.mp4"
+            type="video/mp4"
+          />
+          {/* Fallback Image */}
+          <img
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80"
+            alt="dark aesthetic background"
+            className="w-full h-full object-cover"
+          />
+        </video>
+
+        {/* Overlay Gradient for cinematic depth */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10"></div>
+
+        {/* Content */}
+        <div
+          className="container mx-auto px-6 md:px-12 relative z-20 text-center text-white"
+          data-scroll
+          data-scroll-speed="1"
+        >
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">
+            CAPTURING THE <span className="text-amber-500">DARK</span> BEAUTY
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto font-light italic">
+            Exploring the world through my lens, one frame at a time.
+          </p>
+        </div>
+      </section>
+
       {/* <section
         id="intro"
         className="min-h-screen flex items-center justify-center relative h-[100vh] overflow-hidden"
