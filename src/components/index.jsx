@@ -8,6 +8,7 @@ import Showcase from "./showcase";
 import FeedbackSection from "./FeedbackSection";
 import ContactSection from "./ContactSection";
 import Footer from "./Footer"; // ✅ Import Footer
+import IntroSection from "./Intro";
 const Index = () => {
   const [isOpen, setIsOpen] = useState(false);
   const scrollRef = useRef(null);
@@ -155,7 +156,8 @@ const Index = () => {
       </nav>
 
       {/* Intro */}
-      <section
+      <IntroSection />
+      {/* <section
         id="intro"
         className="min-h-screen flex items-center justify-center relative h-[100vh] overflow-hidden"
         data-scroll-section
@@ -181,7 +183,7 @@ const Index = () => {
             Exploring the world through my lens, one frame at a time.
           </p>
         </div>
-      </section>
+      </section> */}
 
       {/* About */}
       <section
