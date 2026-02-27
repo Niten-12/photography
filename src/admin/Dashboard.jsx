@@ -8,31 +8,20 @@ export default function Dashboard() {
   useEffect(() => {
     const token = localStorage.getItem("adminToken");
 
-    if (!token) {
-      alert("Please log in to access the dashboard");
-      navigate("/admin");
-      return;
-    }
-
     const fetchProtectedData = async () => {
       const response = await fetch(
-        "http://localhost:5000/api/admin/dashboard",
+        `${import.meta.env.VITE_API_BASE}/api/admin/dashboard`,
         {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,
           },
-        }
+        },
       );
 
-      const data = await response.json();
-
       if (response.status === 401) {
-        alert("Session expired or unauthorized");
         localStorage.removeItem("adminToken");
         navigate("/admin");
-      } else {
-        console.log("Protected Data:", data);
       }
     };
 
