@@ -8,7 +8,7 @@ import Showcase from "./showcase";
 import FeedbackSection from "./FeedbackSection";
 import ContactSection from "./ContactSection";
 import Footer from "./Footer"; // ✅ Import Footer
-import AboutSection from "./components/AboutSection";
+import AboutSection from "./AboutSection";
 
 const Index = () => {
   const [isOpen, setIsOpen] = useState(false);
