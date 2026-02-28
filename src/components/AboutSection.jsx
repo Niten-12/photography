@@ -1,5 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
-import { motion as Motion, useScroll, useTransform, useInView } from "framer-motion";
+import {
+  motion as Motion,
+  useScroll,
+  useTransform,
+  useInView,
+} from "framer-motion";
 import {
   FiCamera,
   FiHeart,
@@ -175,10 +180,10 @@ const AboutSection = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[3/4] sm:aspect-[4/5] md:aspect-[3/4] max-w-md mx-auto lg:max-w-none">
               {/* Image with lazy loading and WebP support */}
               <picture>
-                <source srcSet="/images/satya1.webp" type="image/webp" />
-                <source srcSet="/images/satya1.JPG" type="image/jpeg" />
+                <source srcSet="/image/satya1.webp" type="image/webp" />
+                <source srcSet="/image/satya1.JPG" type="image/jpeg" />
                 <Motion.img
-                  src="/images/satya1.JPG"
+                  src="/image/satya1.JPG"
                   alt="Satya - Professional Photographer"
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -572,7 +577,7 @@ const AboutSection = () => {
               controls
               autoPlay
               className="w-full h-full rounded-lg"
-              poster="/images/video-thumbnail.jpg"
+              poster="/image/video-thumbnail.jpg"
             >
               <source src="/videos/about-intro.mp4" type="video/mp4" />
               Your browser does not support the video tag.
