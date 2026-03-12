@@ -8,7 +8,7 @@ import Showcase from "./showcase";
 import FeedbackSection from "./FeedbackSection";
 import ContactSection from "./ContactSection";
 import Footer from "./Footer"; // ✅ Import Footer
-import AboutSection from "./AboutSection";
+// import AboutSection from "./AboutSection";
 
 const Index = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -232,7 +232,7 @@ const Index = () => {
       </section> */}
 
       {/* About */}
-      {/* <section
+      <section
         id="about"
         className="min-h-screen px-8 py-16 md:px-16 bg-[#0B1120] text-white"
         data-scroll-section
@@ -384,8 +384,8 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </section> */}
-      <AboutSection />
+      </section>
+      {/* <AboutSection /> */}
       <Showcase />
       <Services />
       <FeedbackSection />
