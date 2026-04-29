@@ -3,7 +3,7 @@ import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
 export default function Showcase() {
-  const images = [1, 2, 3, 4, 5, 6];
+  const images = [...Array(12).keys()].map(i => i + 1);
   const [activeIndex, setActiveIndex] = useState(0);
   const scrollRef = useRef(null);
 
@@ -56,16 +56,19 @@ export default function Showcase() {
 
       {/* Pagination Dots */}
       <div className="flex justify-center mt-6 space-x-3 ">
-        {images.map((_, idx) => (
-          <button
-            key={idx}
-            onClick={() => scrollToIndex(idx)}
-            className={`w-3 h-3 rounded-full transition-colors ${
-              activeIndex === idx ? "bg-black" : "bg-gray-400 cursor-pointer"
-            }`}
-            aria-label={`Go to slide ${idx + 1}`}
-          ></button>
-        ))}
+        {images.map((_, idx) => {
+          if (idx < images.length / 3) {
+            return (
+              <button
+                key={idx}
+                onClick={() => scrollToIndex(idx)}
+                className={`w-3 h-3 rounded-full transition-colors ${activeIndex === idx ? "bg-black" : "bg-gray-400 cursor-pointer"
+                  }`}
+                aria-label={`Go to slide ${idx + 1}`}
+              ></button>
+            )
+          }
+        })}
       </div>
       {/* Explore Button - Bottom Center */}
       <div className="flex justify-center mt-12">
